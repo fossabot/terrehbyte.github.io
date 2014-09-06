@@ -4,16 +4,46 @@
   {% include head.html %}
 
     <body>
-
     {% include header.html %}
 
     <div class="page-content">
       <div class="wrap">
-      {{ content }}
+        <div class="hp-postlist"> 
+          {{ content }}
+        </div>
       </div>
+      <div class="page-sidebar">
+        test
+      </div>
+      
+      <!-- Pagination Links on default.html -->
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+            <a href="{{ site.baseurl}}/" class="pagination_step">prev</a>
+          {% else %}
+            <a href="/page{{ paginator.previous_page }}" class="pagination_step">prev</a>
+          {% endif %}
+        {% else %}
+          <span class="pagination_step_inactive">back</span>
+        {% endif %}
+        
+        <span class="pagination_pageno">
+          {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+
+        {% if paginator.next_page %}    
+          <a href="/page{{ paginator.next_page }}" class="pagination_step">next</a>
+        {% else %}
+          <span class="pagination_step_inactive">next</span>
+        {% endif %}
+      </div>
+
+      <p class="rss-subscribe">
+        subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+      </p>
     </div>
 
     {% include footer.html %}
-
     </body>
 </html>
