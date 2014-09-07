@@ -1,8 +1,3 @@
----
-page-maxwidth: 800px;
-post-maxwidth: 800px;
----
-
 /* Base */
 /* ----------------------------------------------------------*/
 
@@ -33,7 +28,6 @@ a:visited { color: #205caa; }
 .wrap:after { content:""; display:table; }
 .wrap:after { clear: both; }
 .wrap {
-  display: inline-block;
   max-width: 800px;
   padding: 0 30px;
   margin: 0 auto;
@@ -150,7 +144,6 @@ a:visited { color: #205caa; }
 /* ----------------------------------------------------------*/
 
 .page-content {
-  text-align: center;
   padding: 30px 0;
   background-color: #fff;
 }
@@ -162,28 +155,27 @@ a:visited { color: #205caa; }
   
 }
 
-
-/* Homepage Post Listing styles */
-/* ----------------------------------------------------------*/
-.hp-postlist
-{
-  text-align: left;
-}
-
-
 /* Page Sidebar styles */
 /* ----------------------------------------------------------*/
 .page-sidebar
 {
-  max-width: 200px;
+  width: 20%;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   vertical-align: top;
+  
 }
 
 /* Home styles */
 /* ----------------------------------------------------------*/
+
+.home
+{
+  display: inline-block;
+  float: left;
+  text-align: left;
+  width: 80%;
+}
 
 .home h1 { margin-bottom: 25px; }
 
@@ -276,6 +268,12 @@ a:visited { color: #205caa; }
   max-width: 100%;
 }
 
+.post
+{
+  display: inline-block;
+  width: 80%;
+  float: left;
+}
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -435,13 +433,6 @@ a:visited { color: #205caa; }
   .page-sidebar
   {
     display: none;
-  }
-
-  .wrap
-  {
-    padding: 0 12px;
-    display: inline-block;
-    margin: 0 auto;
   }
 
   .site-nav {
