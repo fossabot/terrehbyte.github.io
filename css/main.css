@@ -166,6 +166,8 @@ a:visited { color: #205caa; }
   
 }
 
+.page-sidebar h1 { margin-bottom: 25px }
+
 /* Home styles */
 /* ----------------------------------------------------------*/
 
@@ -409,6 +411,11 @@ a:visited { color: #205caa; }
     display: none;
   }
 
+  .home
+  {
+    width: 100%;
+  }
+
   .footer-col-1 { width: 50%; }
 
   .footer-col-2 {
@@ -429,11 +436,6 @@ a:visited { color: #205caa; }
 }
 
 @media screen and (max-width: 600px) {
-
-  .page-sidebar
-  {
-    display: none;
-  }
 
   .site-nav {
     position: fixed;
